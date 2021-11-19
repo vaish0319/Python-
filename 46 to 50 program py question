@@ -1,0 +1,160 @@
+ "#46)Write a Python program to capitalize first and last letters of each word of a given string.\n",
+        "def capitalize_first_last_letters(str1):\n",
+        "     str1 = result = str1.title()\n",
+        "     result =  \"\"\n",
+        "     for word in str1.split():\n",
+        "        result += word[:-1] + word[-1].upper() + \" \"\n",
+        "     return result[:-1]  \n",
+        "     \n",
+        "print(capitalize_first_last_letters(\"acropolis\"))\n",
+        "print(capitalize_first_last_letters(\"Amit\"))"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "AcropoliS\n",
+            "AmiT\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "NVTmqyzUB8kd",
+        "outputId": "66495dec-22d9-4a49-ec81-86db2dc06517"
+      },
+      "source": [
+        "#47)Write a Python program to compute sum of digits of a given string.\n",
+        "def sum_digits_string(str1):\n",
+        "    sum_digit = 0\n",
+        "    for x in str1:\n",
+        "        if x.isdigit() == True:\n",
+        "            z = int(x)\n",
+        "            sum_digit = sum_digit + z\n",
+        "\n",
+        "    return sum_digit\n",
+        "     \n",
+        "print(sum_digits_string(\"Acropolis596CI\"))\n",
+        "print(sum_digits_string(\"CS35IT\"))"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "20\n",
+            "8\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ZJkLbHyRB9HP",
+        "outputId": "a9e16703-2615-4c9e-d1d5-bb6d160145d0"
+      },
+      "source": [
+        "#48)Write a Python function that takes a list of words and returns the length of the longest one.\n",
+        "def find_longest_word(words_list):\n",
+        "    word_len = []\n",
+        "    for n in words_list:\n",
+        "        word_len.append((len(n), n))\n",
+        "    word_len.sort()\n",
+        "    return word_len[-1][0], word_len[-1][1]\n",
+        "result = find_longest_word([\"CS\", \"ACROPOLIS\", \"CSIT\"])\n",
+        "print(\"\\nLongest word: \",result[1])\n",
+        "print(\"Length of the longest word: \",result[0])"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "\n",
+            "Longest word:  ACROPOLIS\n",
+            "Length of the longest word:  9\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "CYQ4AOaA5OGV",
+        "outputId": "b7388064-1404-4c12-f8e8-9f7d52f23a44"
+      },
+      "source": [
+        "#49.Write a function x(n) for computing an element in the sequence xn=n^2+1. Call the function for n=4 and write out the result.\n",
+        "\n",
+        "def x(n):\n",
+        "  return(n**2 + 1)\n",
+        "\n",
+        "print(x(4))"
+      ],
+      "execution_count": 21,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "17\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "GzdGZTpoA1NS",
+        "outputId": "af8b80e9-cd73-4f57-958a-0bf71ef13019"
+      },
+      "source": [
+        "#50. Take the following Python code that stores a string: ‘str = 'Y-tatata-acropolis: 0.8475'. Use find and string slicing to extract the portion \n",
+        "#of the string after the colon character and then use the float function to convert the extracted string into a floating point number.\n",
+        "\n",
+        "string = 'Y-tatata-acropolis: 0.8475'\n",
+        "col_pos = string.find(':')                  # Finds the colon character\n",
+        "number = string[col_pos + 1:]                 # Extracts portion after colon\n",
+        "confidence = float(number)                  # Converts to floating point number\n",
+        "print(confidence)\n"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "0.8475\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "6b9o7opwCzUN",
+        "outputId": "064a9f6a-c15c-4492-b735-669e8e641fcf"
+      },
+      "source":
