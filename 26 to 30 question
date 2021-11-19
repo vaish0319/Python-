@@ -1,0 +1,185 @@
+  "#26)Program to find whether a given number is a strong number or not.\n",
+        " # e.g. n=145\n",
+        " # 1!+4!+5!==145\n",
+        "def factorial(d):\n",
+        "   if(d==1 or d==0):\n",
+        "      return 1\n",
+        "   return d*factorial(d-1)\n",
+        "def isStrong(n):\n",
+        "   num=n\n",
+        "   sm=0\n",
+        "   while(n>0):\n",
+        "      digit=n%10\n",
+        "      sm=sm+factorial(digit)\n",
+        "      n=n//10\n",
+        "   if(sm==num):\n",
+        "      return True\n",
+        "   else:\n",
+        "      return False\n",
+        "print(\"Input a number\")\n",
+        "a=int(input())\n",
+        "print(isStrong(a))"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Input a number\n",
+            "145\n",
+            "True\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "pX_Foe87VvCN",
+        "outputId": "a00c35f3-cb24-4a0c-956a-5084b514a714"
+      },
+      "source": [
+        "#27. Program to find whether a given number is a unique number. For example, 20, 56, 9863, 145, etc. are the unique numbers\n",
+        "#while 33, 121, 900, 1010, etc. are not unique numbers\n",
+        "\n",
+        "visited = [0,0,0,0,0,0,0,0,0,0];\n",
+        "num=20\n",
+        "while (num):\n",
+        "  if visited[num % 10] == 1:\n",
+        "    break;\n",
+        "  visited[num % 10] = 1;\n",
+        "  num = (int)(num / 10);\n",
+        "\n",
+        "if num == 0:\n",
+        "  print(\"no. is unique\");\n",
+        "else:\n",
+        "  print(\"no. is not unique\")\n",
+        "\n",
+        "\n"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "no. is not unique\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "9t2xTR9MVuwG",
+        "outputId": "d940e98d-0992-4524-da8e-35aca218e621"
+      },
+      "source": [
+        "#28)Program to find whether a given number is a perfect number or not.\n",
+        "def perfect_number(n):\n",
+        "    sum = 0\n",
+        "    for x in range(1, n):\n",
+        "        if n % x == 0:\n",
+        "            sum += x\n",
+        "    return sum == n\n",
+        "print(perfect_number(6))"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "True\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "BTcLhPxVY-VD",
+        "outputId": "4944b996-677b-4f72-8718-41f366504b32"
+      },
+      "source": [
+        "#29)Program to find whether a given number is a prime number or not.\n",
+        "num = 11\n",
+        "if num > 1:\n",
+        "    for i in range(2, int(num/2)+1):\n",
+        "        if (num % i) == 0:\n",
+        "            print(num, \"is not a prime number\")\n",
+        "            break\n",
+        "    else:\n",
+        "        print(num, \"is a prime number\")\n",
+        "  \n",
+        "else:\n",
+        "    print(num, \"is not a prime number\")"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "11 is a prime number\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ZPv9Na10ZAPv",
+        "outputId": "6a31e2e3-7e49-4c6f-ae3a-86412c9e0eb6"
+      },
+      "source": [
+        "'''30)Print downward Half-Pyramid Pattern with Star (asterisk)\n",
+        "* * * * *  \n",
+        "* * * *  \n",
+        "* * *  \n",
+        "* *  \n",
+        "*'''\n",
+        "rows = 5 \n",
+        "for i in range(rows + 1, 0, -1):    \n",
+        "    for j in range(0, i - 1):  \n",
+        "        print(\"*\", end=' ')  \n",
+        "    print(\" \") "
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "* * * * *  \n",
+            "* * * *  \n",
+            "* * *  \n",
+            "* *  \n",
+            "*  \n",
+            " \n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "9cNDXpBaSePu",
+        "outputId": "52cd343c-fac5-4539-bb8a-910f20867825"
+      },
