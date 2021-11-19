@@ -1,0 +1,42 @@
+ 16. A student will not be allowed to sit in exam if his/her attendence is less than 80%.\n",
+        "# Take following input from user\n",
+        "# Total Number of classes held\n",
+        "# Total Number of classes attended. And print percentage of class attended. Is student is allowed to sit in exam or not.\n",
+        "\n",
+        "a=int(input(\"Number of classes held:\"))\n",
+        "\n",
+        "b=int(input(\"Number of classes attended:\"))\n",
+        "\n",
+        "percentage=b/a*100\n",
+        "\n",
+        "if percentage>=80:\n",
+        "\n",
+        "        print(\"The student is allowed to sit in the exam hall\")\n",
+        "\n",
+        "else:\n",
+        "\n",
+        "        print(\"The student is not allowed to sit in the exam hall\")"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Number of classes held:10\n",
+            "Number of classes attended:9\n",
+            "The student is allowed to sit in the exam hall\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "67V9kr3yyQoM",
+        "outputId": "baef67d0-1ff8-496e-bf8b-5fcb95f789dc"
+      },
+      "source":
