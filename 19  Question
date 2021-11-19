@@ -1,0 +1,34 @@
+ "#19. Program to find the digital product of a given number\n",
+        "#    ex: n=43   Digital product ----->4*3=12\n",
+        "def getProduct(n):\n",
+        "  product = 1\n",
+        "  num = str(n)\n",
+        "  for i in num:\n",
+        "    product = product * int(i)\n",
+        "  return product\n",
+        "  \n",
+        "n=int(input(\"Enter the number:\"))\n",
+        "print(getProduct(n))"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter the number:43\n",
+            "12\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "82ONEFnk1SIQ",
+        "outputId": "0b33aeb9-af2f-4a5a-da12-24ee0d31af70"
+      },
+      "source": 
