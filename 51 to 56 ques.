@@ -1,0 +1,175 @@
+ "#51. Write a function that returns the middle value among three integers. (Hint: make use of min() and max()). Write code to test this function with different inputs.\n",
+        "\n",
+        "def middleOfThree(a, b, c) :\n",
+        "\tif a > b :\n",
+        "\t\tif (b > c):\n",
+        "\t\t\treturn b\n",
+        "\t\telif (a > c) :\n",
+        "\t\t\treturn c\n",
+        "\t\telse :\n",
+        "\t\t\treturn a\n",
+        "\telse:\n",
+        "\t\tif (a > c) :\n",
+        "\t\t\treturn a\n",
+        "\t\telif (b > c) :\n",
+        "\t\t\treturn c\n",
+        "\t\telse :\n",
+        "\t\t\treturn b\n",
+        "\n",
+        "a = 20\n",
+        "b = 45\n",
+        "c = 40\n",
+        "print( middleOfThree(a, b, c) )"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "40\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "EE9DRUEtEHqX",
+        "outputId": "bb41c401-f4fd-4398-e2b4-f303bb2aaffd"
+      },
+      "source": [
+        "#52.Write a function that computes the area of a rectangle. Then, write a second function that calls this function three times to compute the surface area of a rectangular solid.\n",
+        "def secondfun():\n",
+        "  for i in range(3):\n",
+        "    print(area(i+1,i+3))\n",
+        "\n",
+        "def area(h,w):\n",
+        "  area=h*w\n",
+        "  return area\n",
+        "height=2\n",
+        "width=3\n",
+        "print(area(height,width))\n",
+        "\n",
+        "secondfun()\n"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "6\n",
+            "3\n",
+            "8\n",
+            "15\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "2CAguGjFHVZM",
+        "outputId": "701ac771-4bc6-445d-923b-8ac65894f142"
+      },
+      "source": [
+        "#53.Create an outer function that will accept three parameters, a, b and c. Create an inner function inside an outer function that will calculate the\n",
+        "#addition of a, b and c. At last, an outer function will add 5 into addition and return it \n",
+        "def num1(x,y,z):\n",
+        "  def num2(a,b,c):\n",
+        "    return a+b+c\n",
+        "  outer=num2(x,y,z)+5\n",
+        "  return outer\n",
+        "\n",
+        "print(num1(5,4,5))\n"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "19\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "v61xLk9XHVWD",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "0a26becb-042a-44bf-9e4f-b6f6e8ac0ec8"
+      },
+      "source": [
+        "#54.Write a program to create a recursive function to calculate the product of numbers from 10 to 100.\n",
+        "\n",
+        "def recur(n):\n",
+        "   if n == 10:\n",
+        "       return n\n",
+        "   else:\n",
+        "       return n*recur(n-1)\n",
+        "\n",
+        "print(\"the product of numbers from 10 to 100 : \" \"is\", recur(100))\n"
+      ],
+      "execution_count": 20,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "the product of numbers from 10 to 100 : is 257182031095525112107857249934597388918419224714455526533820998388496472644482792132224051962512451185663850090463028434334174412800000000000000000000000\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "rgmVoehhHVSH",
+        "outputId": "c824dabc-e291-46d8-d0e8-5d89d438f92b"
+      },
+      "source": [
+        "#55.Write a Python function to calculate the factorial of a number (a non-negative integer). The function accepts the number as an argument.\n",
+        "def factorial(n):\n",
+        "    if n == 0:\n",
+        "        return 1\n",
+        "    else:\n",
+        "        return n * factorial(n-1)\n",
+        "n=int(input(\"Input a number : \"))\n",
+        "print(factorial(n))"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Input a number : 5\n",
+            "120\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "PzNnRlVTHVMn",
+        "outputId": "4aa267e5-dfc9-4c5b-dd65-c354f3b7b34a"
+      },
+      "source":
