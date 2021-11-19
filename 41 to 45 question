@@ -1,0 +1,156 @@
+ "#41)Write a Python program to count occurrences of a substring in a string.\n",
+        "str1 = 'school collage school'\n",
+        "print()\n",
+        "print(str1.count(\"school\"))\n",
+        "print()"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "\n",
+            "2\n",
+            "\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "c57rH3M0-Qm7",
+        "outputId": "24cb8eef-12a4-472a-b4d8-98deb2f15b7a"
+      },
+      "source": [
+        "#42)Write a Python program to lowercase first n characters in a string.\n",
+        "str1 = 'ACROPOLIS'\n",
+        "print(str1[:4].lower() + str1[4:])"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "acroPOLIS\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "xmFC1zWH-Xtr",
+        "outputId": "ec6fefaa-e5ab-4d6a-ce3a-51ce8b6efcf6"
+      },
+      "source": [
+        "#43)Write a Python program to remove spaces from a given string.\n",
+        "def remove_spaces(str1):\n",
+        "  str1 = str1.replace(' ','')\n",
+        "  return str1\n",
+        "    \n",
+        "print(remove_spaces(\"A c r o p o l i s\"))\n",
+        "print(remove_spaces(\"A M I T \"))"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Acropolis\n",
+            "AMIT\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "pL0txWvk-miV",
+        "outputId": "54ba81b4-6e72-46d9-e0d8-5bb2e03a1870"
+      },
+      "source": [
+        "#44)Write a Python program to move spaces to the front of a given string.\n",
+        "def move_Spaces_front(str1):\n",
+        "  noSpaces_char = [ch for ch in str1 if ch!=' ']\n",
+        "  spaces_char = len(str1) - len(noSpaces_char)\n",
+        "  result = ' '*spaces_char\n",
+        "  result = '\"'+result + ''.join(noSpaces_char)+'\"'\n",
+        "  return(result)\n",
+        "\n",
+        "print(move_Spaces_front(\"Acropolis    Collage  \"))\n",
+        "print(move_Spaces_front(\"CSIT         Branch \"))"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "\"      AcropolisCollage\"\n",
+            "\"          CSITBranch\"\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "kgpLWQrZAai3",
+        "outputId": "d2d387d5-3b26-4023-ccd1-c1061a542efc"
+      },
+      "source": [
+        "#45)Write a Python program to find the maximum occurring character in a given string.\n",
+        "def get_max_occuring_char(str1):\n",
+        "  ASCII_SIZE = 256\n",
+        "  ctr = [0] * ASCII_SIZE\n",
+        "  max = -1\n",
+        "  ch = ''\n",
+        "  for i in str1:\n",
+        "    ctr[ord(i)]+=1;\n",
+        " \n",
+        "  for i in str1:\n",
+        "    if max < ctr[ord(i)]:\n",
+        "      max = ctr[ord(i)]\n",
+        "      ch = i\n",
+        "  return ch\n",
+        "\n",
+        "print(get_max_occuring_char(\"Acropolis\"))\n",
+        "print(get_max_occuring_char(\"Amit\"))"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "o\n",
+            "A\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "gdo-DgXuB7_N",
+        "outputId": "3e2d4bbe-a62c-40b5-b024-2e492e6f7bbc"
+      },
