@@ -1,0 +1,34 @@
+ "#18. Program to find digital sum of a given Number\n",
+        "#    ex: n=123  Digital sum----->1+2+3=6\n",
+        "def getsum(n):\n",
+        "  sum=0\n",
+        "  num = str(n)\n",
+        "  for i in num:\n",
+        "    sum = sum + int(i)\n",
+        "  return sum\n",
+        "  \n",
+        "n=int(input(\"Enter the number:\"))\n",
+        "print(getsum(n))\n"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter the number:123\n",
+            "6\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "vVa6mFAh1scB",
+        "outputId": "ae8fa098-7394-4293-d673-82a917435940"
+      },
+      "source":
