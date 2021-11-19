@@ -1,0 +1,169 @@
+  "#36. Write a Python program to add 'polis' at the end of a given string (length should be at least 3).\n",
+        "#  If the given string already ends with 'polis' then add 'polisCSIT' instead.\n",
+        "#  If the string length of the given string is less than 3, leave it unchanged. \n",
+        "#  Sample String : 'abc'\n",
+        "#  Expected Result : 'abcpolisCSIT' \n",
+        "#  Sample String : 'Acropolis'\n",
+        "#  Expected Result : 'AcropolisCSIT'\n",
+        "\n",
+        "def add_string(str1):\n",
+        "  length = len(str1)\n",
+        "\n",
+        "  if length > 2:\n",
+        "    if str1[-5:] == 'polis':\n",
+        "      str1 += 'CSIT'\n",
+        "    else:\n",
+        "      str1 += 'polis'\n",
+        "\n",
+        "  return str1\n",
+        "print(add_string('ab'))\n",
+        "print(add_string('abc'))\n",
+        "print(add_string('Acropolis'))"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "ab\n",
+            "abcpolis\n",
+            "AcropolisCSIT\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "PGtp7-CSIT71rJ",
+        "outputId": "9fb40c99-ba8a-42da-af1f-78079a32f166"
+      },
+      "source": [
+        "#37)Write a Python program to count the number of characters (character frequency) in a string. \n",
+        "# Sample String : google.com'\n",
+        "#Expected Result : {'o': 3, 'g': 2, '.': 1, 'e': 1, 'l': 1, 'm': 1, 'c': 1}\n",
+        "def char_frequency(str1):\n",
+        "    dict = {}\n",
+        "    for n in str1:\n",
+        "        keys = dict.keys()\n",
+        "        if n in keys:\n",
+        "            dict[n] += 1\n",
+        "        else:\n",
+        "            dict[n] = 1\n",
+        "    return dict\n",
+        "print(char_frequency('google.com'))"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "{'g': 2, 'o': 3, 'l': 1, 'e': 1, '.': 1, 'c': 1, 'm': 1}\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "MeEff1OV6yqb",
+        "outputId": "a48e7aaa-259e-4bc8-a523-1aadad3da8f8"
+      },
+      "source": [
+        "#38. Write a Python program to change a given string to a new string where the second and last chars have been exchanged.\n",
+        "def change_sring(str1):\n",
+        "      return str1[0:1]+str1[-1:] + str1[2:-1] + str1[1:2]\n",
+        "\t  \n",
+        "print(change_sring('abcd'))\n",
+        "print(change_sring('12345'))"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "adcb\n",
+            "15342\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "aY77ihLw-7Lj",
+        "outputId": "3cc0945c-c09a-4577-8da9-f16fe7761b84"
+      },
+      "source": [
+        "#39)Write a Python program to remove the characters which have even index values of a given string.\n",
+        "def even_values_string(str):\n",
+        "  result = \"\" \n",
+        "  for i in range(len(str)):\n",
+        "    if i % 2!= 0:\n",
+        "      result = result + str[i]\n",
+        "  return result\n",
+        "\n",
+        "print(even_values_string('abcdef'))\n",
+        "print(even_values_string('python'))"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "bdf\n",
+            "yhn\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "VQjbgXZL-_m6",
+        "outputId": "736b25a8-484c-4c0d-db4a-71cfefad0565"
+      },
+      "source": [
+        "#40 .Write a Python program that takes input from the user and displays that input back in upper and lower cases.\n",
+        "str1=input(\"enter string :\")\n",
+        "print(\"in upper :\" ,str1.upper())\n",
+        "print(\"in lower :\" ,str1.lower())"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "enter string :amIt\n",
+            "in upper : AMIT\n",
+            "in lower : amit\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "aOWzcE9G7Men",
+        "outputId": "b713ecb4-9fc0-4ecd-f97a-8f9dc4e5ec82"
+      },
