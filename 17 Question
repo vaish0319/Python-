@@ -1,0 +1,41 @@
+ "#17. Calculate income tax for the given income by adhering to the below rules\n",
+        "# Taxable Income        Rate (in %)\n",
+        "# First Rs.10,0000         0\n",
+        "# Next Rs. 10,0000       10\n",
+        "# The remaining           20\n",
+        "\n",
+        "income=int(input(\"enter income :\"))\n",
+        "\n",
+        "if (income <= 100000):\n",
+        "  tax = 0\n",
+        "\n",
+        "elif (income <= 200000):\n",
+        "  tax = (income*10)/100\n",
+        "\n",
+        "else :\n",
+        "  tax = (income *20)/100\n",
+        "\n",
+        "print(\"you owe\", tax, \"Rupees in tax!\")"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "enter income :500000\n",
+            "you owe 100000.0 Rupees in tax!\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "wWMnh18K1rra",
+        "outputId": "5ae9ac95-2b2c-4a3d-b67a-5023b7903f7b"
+      },
+      "source":
