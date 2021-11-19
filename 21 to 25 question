@@ -1,0 +1,196 @@
+  "#21.Print the following pattern\n",
+        "# * \n",
+        "# * * \n",
+        "# * * * \n",
+        "# * * * * \n",
+        "# * * * * * \n",
+        "# * * * * \n",
+        "# * * * \n",
+        "# * * \n",
+        "# *\n",
+        "\n",
+        "rows = 5\n",
+        "for i in range(0, rows):\n",
+        "    for j in range(0, i + 1):\n",
+        "        print(\"*\", end=' ')\n",
+        "    print(\"\\r\")\n",
+        "\n",
+        "for i in range(rows, 0, -1):\n",
+        "    for j in range(0, i - 1):\n",
+        "        print(\"*\", end=' ')\n",
+        "    print(\"\\r\")\n",
+        "\n"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "* \r\n",
+            "* * \r\n",
+            "* * * \r\n",
+            "* * * * \r\n",
+            "* * * * * \r\n",
+            "* * * * \r\n",
+            "* * * \r\n",
+            "* * \r\n",
+            "* \r\n",
+            "\r\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "GcJ-6RHeVvfw",
+        "outputId": "4c58f47c-8ca6-4614-8568-34c2ab69d9e7"
+      },
+      "source": [
+        "#22. Program to reverse a given Number.    ex: n=123   Reversed no is 321\n",
+        "n = 4562\n",
+        "rev = 0\n",
+        " \n",
+        "while(n > 0):\n",
+        "    a = n % 10\n",
+        "    rev = rev * 10 + a\n",
+        "    n = n // 10\n",
+        " \n",
+        "print(rev)\n"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "2654\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "P9H_TiAeVvbu",
+        "outputId": "7839f956-ce13-4d7b-8cb8-6a2b763e6160"
+      },
+      "source": [
+        "#23.Program to check whether a given number is a palindrome or not\n",
+        "\n",
+        "def reverseDigits(num) :\n",
+        "\trev_num = 0;\n",
+        "\twhile (num > 0) :\n",
+        "\t\trev_num = rev_num * 10 + num % 10\n",
+        "\t\tnum = num // 10\t\n",
+        "\treturn rev_num\n",
+        "\n",
+        "def isPalindrome(n) :\n",
+        "\trev_n = reverseDigits(n);\n",
+        "\tif (rev_n == n) :\n",
+        "\t\treturn 1\n",
+        "\telse :\n",
+        "\t\treturn 0\n",
+        "\n",
+        "\n",
+        "n = 121\t\n",
+        "if isPalindrome(n) == 1 :\n",
+        "  print(\"Is\", n, \"a Palindrome number? ->\", True)\n",
+        "\t\t\n",
+        "else :\n",
+        "  print(\"Is\", n, \"a Palindrome number? ->\", False)\n"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Is 121 a Palindrome number? -> True\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "I6xUyN6hVvXg",
+        "outputId": "d8945574-b7a2-4e34-ce75-5d63df76e904"
+      },
+      "source": [
+        "#24.Program to check whether a given number is an Armstrong number or not.\n",
+        "num = int(input(\"Enter a number: \"))\n",
+        "sum = 0\n",
+        "\n",
+        "temp = num\n",
+        "while temp > 0:\n",
+        "   digit = temp % 10\n",
+        "   sum += digit ** 3\n",
+        "   temp //= 10\n",
+        "\n",
+        "if num == sum:\n",
+        "   print(num,\"is an Armstrong number\")\n",
+        "else:\n",
+        "   print(num,\"is not an Armstrong number\")\n"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter a number: 407\n",
+            "407 is an Armstrong number\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "hCc5eNCxVvRU",
+        "outputId": "5185879d-ca3e-41b4-82ae-b667e77ff086"
+      },
+      "source": [
+        "#25.Program to find factorial of a given number.\n",
+        "fact=1\n",
+        "n=5\n",
+        "while(n!=0):\n",
+        "    fact=fact*n\n",
+        "    n=n-1\n",
+        "\n",
+        "print(\"fact\",fact)\n"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "fact 120\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "UmqWFn4MVvNl",
+        "outputId": "6ca597eb-58c2-4748-d96d-76d4c18808f9"
+      },
