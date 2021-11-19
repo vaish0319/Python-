@@ -1,0 +1,211 @@
+   "#61. First, def a function called calculate_distance, with one argument (choose any argument name you like).\n",
+        "#   If the type of the argument is either int or float, the function should return the absolute value of the function input.\n",
+        "#   Otherwise, the function should return \"No value\". Check if it works calling the function with  9.6 and \"what?\".\n",
+        "\n",
+        "def calculate_distance(argument):\n",
+        "  if type(argument) == int or type(argument) == float:\n",
+        "      return abs(argument)\n",
+        "  else:\n",
+        "      print(\"No value\")\n",
+        "\n",
+        "print(\"the absolute value : \" ,calculate_distance(33.20))\n",
+        "\n",
+        "calculate_distance(\"what?\")"
+      ],
+      "execution_count": 17,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "the absolute value :  33.2\n",
+            "No value\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "WCKiCn9ma-lv",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "b4671640-9b25-4ddb-93eb-9652ee048e08"
+      },
+      "source": [
+        "#62.Python program to display the sum of input (n) numbers using a list.\n",
+        "\n",
+        "list1 = [11, 5, 17, 18, 23]\n",
+        "total=0\n",
+        "for i in range(0, len(list1)):\n",
+        "    total = total + list1[i]\n",
+        " \n",
+        "print(\"Sum of all elements in given list: \", total)"
+      ],
+      "execution_count": 2,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Sum of all elements in given list:  74\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "9FcdRxR0a-Yj",
+        "outputId": "ad0cd825-4ba0-4c84-b03f-6afb4246488f"
+      },
+      "source": [
+        "#63)Python program to insert a number to given position in a list.\n",
+        "print(\"Enter 10 Elements of List: \")\n",
+        "nums = []\n",
+        "for i in range(10):\n",
+        "    nums.insert(i, input())\n",
+        "print(\"Enter an Element to Insert at End: \")\n",
+        "elem = input()\n",
+        "nums.append(elem)\n",
+        "print(\"\\nThe New List is: \")\n",
+        "print(nums)"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter 10 Elements of List: \n",
+            "2\n",
+            "3\n",
+            "4\n",
+            "5\n",
+            "6\n",
+            "1\n",
+            "8\n",
+            "6\n",
+            "9\n",
+            "5\n",
+            "Enter an Element to Insert at End: \n",
+            "4\n",
+            "\n",
+            "The New List is: \n",
+            "['2', '3', '4', '5', '6', '1', '8', '6', '9', '5', '4']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "XrJuZO5ja-L_",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "4847e239-6d46-4ae6-def2-8fd388c9cb12"
+      },
+      "source": [
+        "#64. Write the program that prompts the user for a list of numbers and prints out the maximum and minimum of the \n",
+        "# numbers at the end when the user enters “done”. Write the program to store the numbers the user enters in a list and \n",
+        "# use the max() and min() functions to compute the maximum and minimum numbers after the loop completes.\n",
+        "\n",
+        "my_list = []                     \n",
+        "while True:\n",
+        "    number = 0.0\n",
+        "    input_number = input('Enter a number: ')\n",
+        "    if input_number == 'done':\n",
+        "        break\n",
+        "\n",
+        "    try:\n",
+        "        number = float(input_number)\n",
+        "    except ValueError:\n",
+        "        print('Invalid input')\n",
+        "        quit()\n",
+        "\n",
+        "    my_list.append(number)\n",
+        "\n",
+        "if my_list:\n",
+        "    print('Maximum: ', max(my_list) or None)\n",
+        "    print('Minimum: ', min(my_list) or None)"
+      ],
+      "execution_count": 9,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter a number: 4\n",
+            "Enter a number: 55\n",
+            "Enter a number: 7\n",
+            "Enter a number: 4\n",
+            "Enter a number: done\n",
+            "[4.0, 55.0, 7.0, 4.0]\n",
+            "Maximum:  55.0\n",
+            "Minimum:  4.0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "YKBWSZ9xa93P",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "344cf390-b0c1-4e22-bf08-c2f5830a5266"
+      },
+      "source": [
+        "#65.Write another program that prompts for a list of numbers as above and at the end prints out both the maximum and minimum of the numbers.\n",
+        "my_list = []                     \n",
+        "while True:\n",
+        "    number = 0.0\n",
+        "    input_number = input('Enter a number: ')\n",
+        "    if input_number == 'done':\n",
+        "        break\n",
+        "\n",
+        "    try:\n",
+        "        number = float(input_number)\n",
+        "    except ValueError:\n",
+        "        print('Invalid input')\n",
+        "        quit()\n",
+        "\n",
+        "    my_list.append(number)\n",
+        "\n",
+        "if my_list:\n",
+        "    print('Maximum: ', max(my_list) or None)\n",
+        "    print('Minimum: ', min(my_list) or None)\n"
+      ],
+      "execution_count": 10,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter a number: 3\n",
+            "Enter a number: 4\n",
+            "Enter a number: 9\n",
+            "Enter a number: 1\n",
+            "Enter a number: done\n",
+            "Maximum:  9.0\n",
+            "Minimum:  1.0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "hCcxKn9ya9fn",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "41bcf6d1-7c86-479a-c34f-89107d9c4871"
+      },
+      "source":
