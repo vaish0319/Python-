@@ -1,0 +1,180 @@
+"#56.Write a Python function to display all the multiples of  7 & 9 within the range 100 to 500.\n",
+        "nl=[]\n",
+        "for x in range(100, 501):\n",
+        "    if (x%7==0) and (x%9==0):\n",
+        "        nl.append(str(x))\n",
+        "print (','.join(nl))"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "126,189,252,315,378,441\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ygx4_wlXHVJE",
+        "outputId": "127e9923-39a9-4e40-d5b2-16f05e4b1f37"
+      },
+      "source": [
+        "#57.Write a Python function  to check whether the given integer is a prime number or not.\n",
+        "num = 27\n",
+        "flag = False\n",
+        "def prime(n):\n",
+        "  flag1=False\n",
+        "  if n > 1:\n",
+        "    for i in range(2, n):\n",
+        "        if (n % i) == 0:\n",
+        "            flag1 = True\n",
+        "            break\n",
+        "  return flag1\n",
+        "\n",
+        "flag=prime(num)\n",
+        "if flag:\n",
+        "    print(num, \"is not a prime number\")\n",
+        "else:\n",
+        "    print(num, \"is a prime number\")"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "27 is not a prime number\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Ev_BZafpHVDX",
+        "outputId": "8cb7a27b-03bb-45c1-b667-461900958e9b"
+      },
+      "source": [
+        "#58. Write a Python function that checks whether a passed interger is armstrong or not.\n",
+        "\n",
+        "n = int(input(\"Enter a number: \"))\n",
+        "\n",
+        "def armstrong(num):\n",
+        "  sum = 0\n",
+        "  temp = num\n",
+        "  while temp > 0:\n",
+        "    digit = temp % 10\n",
+        "    sum += digit ** 3\n",
+        "    temp //= 10\n",
+        "  return sum\n",
+        "\n",
+        "summ=armstrong(n)\n",
+        "if n == summ:\n",
+        "   print(n,\"is an Armstrong number\")\n",
+        "else:\n",
+        "   print(n,\"is not an Armstrong number\")\n"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter a number: 407\n",
+            "407 is an Armstrong number\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "6FKu-WbbHU4v",
+        "outputId": "243cc780-656a-4916-feb6-335b547d601f"
+      },
+      "source": [
+        "#59. Program to return a function from another function.\n",
+        "\n",
+        "def B():\n",
+        "\tprint(\"Inside the method B.\")\n",
+        "\t\n",
+        "def A():\n",
+        "\tprint(\"Inside the method A.\")\n",
+        "\treturn B\n",
+        "\n",
+        "returned_function = A()\n",
+        "\n",
+        "returned_function()\n"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Inside the method A.\n",
+            "Inside the method B.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "wYbQiXDINiOS",
+        "outputId": "307c16ae-8c49-4573-ceab-f644ee253b30"
+      },
+      "source": [
+        "#60. First, def a function, start_process, that takes one argument p. Then, if the start_process function receives an p equal to \"Yes\",\n",
+        "# it should return \"Start Process\" Alternatively, elif p is equal to \"No\", then the function should return \"Start Process Aborted\".\n",
+        "#  Finally, if start_process gets anything other than those inputs, the function should return \"Sorry for the input\".\n",
+        "\n",
+        "def start_process(p):\n",
+        "  if p==\"Yes\":\n",
+        "    return \"Start Process\"\n",
+        "  elif p==\"No\":\n",
+        "    return \"Start Process Aborted\"\n",
+        "  else:\n",
+        "    return \"Sorry for the input\"\n",
+        "\n",
+        "command= input(\"Enter a command: \")\n",
+        "print(start_process(command))"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter a command: Yes\n",
+            "Start Process\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "gSqf0HgENiEa",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "cfadc96f-bb9e-4553-c267-da7b48e8d393"
+      },
+      "source":
