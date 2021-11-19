@@ -1,0 +1,30 @@
+ "# 20.Find the sum of the series 3 +33 + 333 + 3333 + .. n terms\n",
+        "n=int(input(\"Enter the range of number:\"))\n",
+        "sum=0\n",
+        "p=3\n",
+        "for i in range(1,n+1):\n",
+        "    sum += p\n",
+        "    p=(p*10)+3\n",
+        "print(\"The sum of the series = \",sum)"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter the range of number:3\n",
+            "The sum of the series =  369\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "BNQXaqB74MQa",
+        "outputId": "082eafa0-1c64-4cb6-a1a5-6a36bb4980b8"
+      },
